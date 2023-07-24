@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@material-tailwind/react':
-    specifier: ^2.0.7
-    version: 2.0.7(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^2.0.6
+    version: 2.0.6(react-dom@18.2.0)(react@18.2.0)
   '@types/node':
     specifier: 20.4.4
     version: 20.4.4
@@ -151,6 +151,14 @@ packages:
       tabbable: 6.2.0
     dev: false
 
+  /@heroicons/react@2.0.18(react@18.2.0):
+    resolution: {integrity: sha512-7TyMjRrZZMBPa+/5Y8lN0iyvUU/01PeMGX2+RE7cQWpEUIcb4QotzUObFkJDejj/HUH4qjP/eQ0gzzKs2f+6Yw==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /@humanwhocodes/config-array@0.11.10:
     resolution: {integrity: sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==}
     engines: {node: '>=10.10.0'}
@@ -205,13 +213,14 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: false
 
-  /@material-tailwind/react@2.0.7(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-knZFeK4NcYX+d7duCsosvn+GP2Ov3QTh56CYILQs47nhOilOk2OutIZh55NKEt9+OQJaLBA4t098Mu5Z3G3MlA==}
+  /@material-tailwind/react@2.0.6(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-aT2BZd9AAlwuFiuA29FQbayK4RmPPHs5Q3RlB9cnTtpOHXz6v32i3YC90bh1fINpixFeKftJeO7YzeaukX5zsQ==}
     peerDependencies:
       react: ^16 || ^17 || ^18
       react-dom: ^16 || ^17 || ^18
     dependencies:
       '@floating-ui/react': 0.19.2(react-dom@18.2.0)(react@18.2.0)
+      '@heroicons/react': 2.0.18(react@18.2.0)
       classnames: 2.3.2
       deepmerge: 4.3.1
       framer-motion: 6.5.1(react-dom@18.2.0)(react@18.2.0)
