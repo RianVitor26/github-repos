@@ -7,8 +7,6 @@ import { FaMapMarkerAlt } from "react-icons/fa"
 import { StarsRating } from "../Stars";
 import Image from "next/image";
 
-
-
 interface IProfileProps{
     login: string;
     bio: string;
@@ -27,30 +25,27 @@ export const Profile = () => {
 
     useEffect(() => {
       fetch("https://api.github.com/users/rianvitor26", {
-        cache: "force-cache",
+        cache: "default",
         method: 'GET'
       })
         .then((response) => response.json())
         .then((data) => setProfile(data));
     }, []);
 
-    console.log(profile)
-
   return (
       <div className="flex flex-col w-full items-center">
-           <div className="w-40 h-40 rounded-full relative">
-            <AnimatedTooltip/>
+           <div className="w-40 h-40 rounded-full">
             <img src={profile?.avatar_url} alt="Imagem de perfil de RianVitor26" className="h-full w-full rounded-full"></img>
            </div>
            
-           <h1 className="p-2 font-bold text-black">{profile?.login}</h1>
-           <h2 className="text-center text-gray-500 font-medium">{profile?.bio}</h2>
+           <h1 className="p-2 font-bold text-gray-100">{profile?.login}</h1>
+           <h2 className="text-center text-gray-200 font-medium">{profile?.bio}</h2>
             <StarsRating/>
            <div className="w-full flex items-center justify-center gap-4 my-2">
-                <span className="flex items-center gap-2"><BsPersonHearts className="text-blue-700"/>{profile?.followers} followers</span>
-                <span className="flex items-center gap-2"><BsPersonCheckFill className="text-blue-700"/>{profile?.following} following</span>
+                <span className="flex items-center gap-2"><BsPersonHearts className="text-gray-800"/><p className="text-gray-400">{profile?.followers} Seguidores</p></span>
+                <span className="flex items-center gap-2"><BsPersonCheckFill className="text-gray-800"/><p className="text-gray-400">{profile?.following} Seguindo</p></span>
            </div>
-           <span className="flex items-center gap-2"><FaMapMarkerAlt className="text-red-700"/>{profile?.location}</span>
+           <span className="flex items-center gap-2"><FaMapMarkerAlt className="text-gray-800"/><p className="text-gray-400">{profile?.location}</p></span>
 
            <div className="w-full flex items-center gap-2">
 
