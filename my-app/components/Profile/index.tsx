@@ -1,11 +1,10 @@
 "use client"
 
-import { AnimatedTooltip } from "@/components/Tooltip"
 import { useEffect, useState } from "react";
 import { BsPersonHearts, BsPersonCheckFill } from "react-icons/bs"
 import { FaMapMarkerAlt } from "react-icons/fa"
 import { StarsRating } from "../Stars";
-import Image from "next/image";
+
 
 interface IProfileProps{
     login: string;
