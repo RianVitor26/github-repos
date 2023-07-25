@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { BsPersonHearts, BsPersonCheckFill } from "react-icons/bs"
-import { FaMapMarkerAlt } from "react-icons/fa"
-import { StarsRating } from "../Stars";
+import { FaGithub, FaMapMarkerAlt } from "react-icons/fa"
+import { TbWorldCode } from "react-icons/tb"
+import { StarsRating } from "@/components/Stars";
+import { ContactPopover } from "../Popover";
+import Link from "next/link";
+import { FaLinkedin } from "react-icons/fa6";
 
 
 interface IProfileProps{
@@ -31,6 +35,8 @@ export const Profile = () => {
         .then((data) => setProfile(data));
     }, []);
 
+    console.log(profile)
+
   return (
       <div className="flex flex-col w-full items-center">
            <div className="w-40 h-40 rounded-full">
@@ -46,9 +52,14 @@ export const Profile = () => {
            </div>
            <span className="flex items-center gap-2"><FaMapMarkerAlt className="text-gray-800"/><p className="text-gray-400">{profile?.location}</p></span>
 
-           <div className="w-full flex items-center gap-2">
-
-           </div>
+           <div className="w-full flex flex-col gap-2 mt-5">
+                <div className="flex items-center justify-center w-full gap-5 mb-5">
+                  <Link href="https://github.com/RianVitor26"><FaGithub className="text-gray-900 text-2xl"/></Link>
+                  <Link href="https://www.linkedin.com/in/rian-vitor-dos-santos-de-almeida-a036aa202/"><FaLinkedin className="text-blue-600 text-2xl"/></Link>
+                  <Link href="https://rianvitor26dos-santos-de-almeida.vercel.app/"><TbWorldCode className="text-green-500 text-2xl"/></Link>
+                </div>
+                <ContactPopover/>
+           </div> 
       </div>
   );
 }
