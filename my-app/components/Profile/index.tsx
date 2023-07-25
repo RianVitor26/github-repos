@@ -35,7 +35,6 @@ export const Profile = () => {
         .then((data) => setProfile(data));
     }, []);
 
-    console.log(profile)
 
   return (
       <div className="flex flex-col w-full items-center">

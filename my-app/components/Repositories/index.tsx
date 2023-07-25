@@ -126,6 +126,12 @@ export const Repositories = () => {
             })}
           </>
         )}
+
+        {filteredRepos.length < 1 ? 
+        <div className="flex flex-col items-center justify-center">
+              <img src="/octopus.png" alt="Mascote do Github" className="w-44 h-40" />
+              <p className="text-gray-200">Nenhum repo encontrado</p>
+        </div>: null}
       </div>
     </div>
   );
