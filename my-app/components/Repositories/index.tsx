@@ -30,6 +30,8 @@ const colorMapping: LanguageColorMapping = {
   CSS: 'bg-blue-500',
   TypeScript: 'bg-sky-500',
   HTML: 'bg-orange-900',
+  Vue: 'bg-emerald-400',
+  'C#': 'bg-green-600'
 };
 
 
